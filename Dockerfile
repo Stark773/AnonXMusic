@@ -1,24 +1,21 @@
+# ---- Base image (Python 3.13 slim) ----
 FROM python:3.13-slim
 
+# ---- Set working directory ----
 WORKDIR /app
 
-RUN apt-get update -y \
-    && apt-get install -y --no-install-recommends ffmpeg curl unzip \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/* \
-    && curl -fsSL https://deno.land/install.sh | sh
+# ---- Copy all project files ----
+COPY . /app
 
+# ---- Install system dependencies ----
+RUN apt-get update && apt-get install -y \
+    git curl ffmpeg build-essential \
+    && curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
+    && apt-get install -y nodejs \
+    && echo "Node: $(node -v) | npm: $(npm -v)" \
+    && pip install --upgrade pip setuptools wheel \
+    && pip install --no-cache-dir -r requirements.txt \
+    && rm -rf /var/lib/apt/lists/*
 
-ENV DENO_INSTALL="/root/.deno"
-ENV PATH="${DENO_INSTALL}/bin:${PATH}"
-
-RUN curl -Ls https://astral.sh/uv/install.sh | sh
-ENV PATH="/root/.local/bin:${PATH}"
-
-COPY pyproject.toml uv.lock ./
-
-RUN uv sync --frozen
-
-COPY . .
-
-CMD ["bash", "start"]
+# ---- Default command ----
+CMD ["python", "run.py"]
