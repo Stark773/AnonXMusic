@@ -1,187 +1,75 @@
 <div align="center">
 
-<h2>AnonXMusic</h2>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:8B1A8B,50:DA70D6,100:FF69B4&height=200&section=header&text=MUSKAN+MUSIC&fontSize=70&fontColor=ffffff&fontAlignY=38&desc=Your+Premium+Music+Bot&descAlignY=60&descSize=20&animation=fadeIn" width="100%"/>
 
-<b>Telegram Group Calls Streaming Bot</b><br>
-Supports YouTube, Spotify, Resso, Apple Music, SoundCloud and M3U8 links.
+### ──「 Muskan Music 」── *The Ultimate Telegram Music Bot*
 
-<a href="https://github.com/AnonymousX1025/AnonXMusic/stargazers">
-    <img src="https://img.shields.io/github/stars/AnonymousX1025/AnonXMusic?color=blueviolet&logo=github&logoColor=black&style=for-the-badge" alt="Stars"/>
-</a>
-<a href="https://github.com/AnonymousX1025/AnonXMusic/network/members">
-    <img src="https://img.shields.io/github/forks/AnonymousX1025/AnonXMusic?color=blueviolet&logo=github&logoColor=black&style=for-the-badge" alt="Forks"/>
-</a>
-<a href="https://github.com/AnonymousX1025/AnonXMusic/blob/master/LICENSE">
-    <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="License"/>
-</a>
-<a href="https://www.python.org/">
-    <img src="https://img.shields.io/badge/Written%20in-Python-blue?style=for-the-badge&logo=python" alt="Python"/>
-</a>
-<br>
+<br/>
 
-<img src="https://github.com/AnonymousX1025/AnonXMusic/blob/master/.github/anonx.jpg" width="720" height="auto">
+[![Stars](https://img.shields.io/github/stars/Muskan-Music-Bot/Muskan-Music-Bot?color=DA70D6&logo=github&logoColor=white&style=for-the-badge&label=STARS)](https://github.com/Muskan-Music-Bot/Muskan-Music-Bot)
+[![Forks](https://img.shields.io/github/forks/Muskan-Music-Bot/Muskan-Music-Bot?color=DA70D6&logo=github&logoColor=white&style=for-the-badge&label=FORKS)](https://github.com/Muskan-Music-Bot/Muskan-Music-Bot/network/members)
+[![License](https://img.shields.io/badge/LICENSE-MIT-DA70D6?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](https://github.com/Muskan-Music-Bot/Muskan-Music-Bot/blob/master/LICENSE)
+[![Python](https://img.shields.io/badge/PYTHON-3.10+-DA70D6?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Docker](https://img.shields.io/badge/DOCKER-READY-DA70D6?style=for-the-badge&logo=docker&logoColor=white)](https://hub.docker.com/)
+[![Telegram](https://img.shields.io/badge/TELEGRAM-BOT-DA70D6?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/MuskanMusicBot)
 
-AnonXMusic lets you stream high-quality and low-latency audio and video playback into telegram group video chats.<br>
-Built with Python, Pyrogram, and Py-TgCalls, it’s optimized for reliability and easy deployment on Heroku, VPS, or Docker.
+<br/>
+
+> **Muskan Music** is a powerful, feature-rich Telegram music bot.  
+> Stream high-quality audio & video directly in Telegram voice chats — from YouTube, Spotify, Apple Music, SoundCloud, Resso, and more.
+
+<br/>
+
 </div>
 
-<hr>
+---
 
-<h2>🔥 Features</h2>
+## ✦ Features
 
-- 🎧 Stream low-latency audio in real time to <b>Telegram group video chats</b>
-- 🌐 Supports multiple platforms like <b>YouTube, Spotify, Apple Music, SoundCloud</b>
-- ⚡ Advanced queue management with auto-play
-- ⚙️ Easy deployment — works on Local, VPS, or Heroku
-- ❤️ Built with Python
-<hr>
+- 🎵 **Multi-Platform** — YouTube, Spotify, Apple Music, SoundCloud, Resso, Telegram files
+- 🔊 **High Quality Streaming** — Crystal clear audio & video in voice chats
+- 📋 **Queue Management** — Advanced playlist and queue support
+- 🔁 **Loop Mode** — Repeat tracks or playlists
+- ⚡ **Speed Control** — Adjust playback speed
+- 🌍 **Multi-Language** — Support for multiple languages
+- 👑 **Admin Controls** — Full group admin management
+- 📊 **Statistics** — Bot usage and system stats
 
-<h2>☁️ Manual Deployment</h2>
+---
 
-<h3>✔️ Prerequisites</h3>
+## ✦ Supported Platforms
 
-- <a href="https://www.python.org">Python 3.10+</a> installed  
-- <a href="https://deno.com/">deno</a> & <a href="https://ffmpeg.org/">ffmpeg</a> installed on your system  
-- Required variables mentioned in <a href="https://github.com/AnonymousX1025/AnonXMusic/blob/master/sample.env">sample.env</a>
+| Platform | Link Type | Notes |
+|----------|-----------|-------|
+| 🎬 **YouTube** | URL or search query | Supports videos, playlists, and live streams |
+| 🎵 **Spotify** | Spotify track/playlist/album URL | Requires `SPOTIFY_CLIENT_ID` + `SPOTIFY_CLIENT_SECRET` |
+| 🍎 **Apple Music** | Apple Music URL | Auto-resolved to YouTube stream |
+| 🔊 **SoundCloud** | SoundCloud URL | Direct stream support |
+| 🎶 **Resso** | Resso URL | Auto-resolved |
+| 📨 **Telegram** | Audio/video file in chat | Plays directly from Telegram CDN |
 
-<details>
-    <summary>
-        <h3>Local / VPS Setup</h3>
-    </summary>
+---
 
+## ✦ Required Variables
 
-<h4>🐧 Linux/macOS</h4>
+| Variable | Description |
+|----------|-------------|
+| `API_ID` | Your Telegram API ID |
+| `API_HASH` | Your Telegram API Hash |
+| `BOT_TOKEN` | Your Bot Token from @BotFather |
+| `LOGGER_ID` | Log group/channel ID |
+| `MONGO_DB_URI` | MongoDB connection string |
+| `OWNER_ID` | Your Telegram user ID |
+| `STRING_SESSION` | Pyrogram string session for assistant |
 
-```bash
-git clone https://github.com/AnonymousX1025/AnonXMusic && cd AnonXMusic
+---
 
-# Install uv
-curl -Ls https://astral.sh/uv/install.sh | sh
-export PATH="$HOME/.local/bin:$PATH"
+## ✦ Deploy
 
-# Install dependencies
-uv sync --frozen
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/Stark773/Paid-music)
 
-# Rename and configure environment variables
-mv sample.env .env
-# Edit .env with your credentials
-
-# Start the bot
-bash start
-```
-
-<h4>🪟 Windows (PowerShell)</h4>
-
-```bash
-git clone https://github.com/AnonymousX1025/AnonXMusic && cd AnonXMusic
-
-# Install uv
-irm https://astral.sh/uv/install.ps1 | iex
-
-# Install dependencies
-uv sync --frozen
-
-# Rename and configure environment variables
-mv sample.env .env
-# Edit .env with your credentials
-
-# Start the bot
-uv run python3 -m anony
-
-> ⭐ or use Git Bash or WSL to run `bash start`.
-```
-
-</details>
-
-<details>
-    <summary>
-        <h3>Deploy to Heroku</h3>
-    </summary>
-
-> Click on the button below to deploy on Heroku<br>
-    <a href="https://dashboard.heroku.com/new?template=https://github.com/AnonymousX1025/AnonXMusic">
-        <img src="https://img.shields.io/badge/Deploy%20On%20Heroku-black?style=for-the-badge&logo=heroku"/>
-    </a>
-</details>
-
-<hr>
-
-<h2>⚙️ Configuration</h2>
-
-Edit <code>.env</code> (or set variables in your hosting environment):
-<details>
-    <summary>Here's an example of the .env file</summary>
-
-```env
-API_ID=123456
-API_HASH=abcdef1234567890
-BOT_TOKEN=123456:ABC-DEF
-OWNER_ID=123456789
-LOGGER_ID=-1001234567890
-MONGO_URL=mongodb+srv://
-SESSION=BQgfh...AA
-```
-
-> 📝 Check <a href="https://github.com/AnonymousX1025/AnonXMusic/blob/master/config.py">config.py</a> for all available options.
-</details>
-
-<hr>
-
-<h2>🧐 Usage</h2>
-
-1. Add the bot to your Telegram group.  
-2. Promote it to <b>admin</b> with invite users permission.  
-3. Use commands in the chat to control playback:
-<details>
-    <summary>Commands overview</summary>
-    <pre>
-/play [song name or link] -> Play audio in the videochat
-/vplay [song name or link] -> Play video in the videochat
-/pause -> Pause playback
-/resume -> Resume playback
-/skip -> Skip to next track
-/stop -> Stop playback
-/seek -> Seeks the stream
-/queue -> Show queue
-    </pre>
-</details>
-
-<hr>
-
-<h2>❤️ Contributing</h2>
-
-Contributions are welcome!
-
-1. Fork the repository.  
-2. Create your branch: <code>git checkout -b feature/new</code>.  
-4. Commit changes: <code>git commit -m 'New feature'</code>.  
-5. Push: <code>git push origin feature/new</code>
-6. Open a Pull Request.
-
-<hr>
-
-<h2>🗒️ License</h2>
-
-This project is licensed under the <b>MIT License</b> — see <a href="https://github.com/AnonymousX1025/AnonXMusic/blob/master/LICENSE">LICENSE</a> for details.
-
-<hr>
-
-<h2>🤞 Updates and support</h2>
-
-- <a href="https://fallenx.t.me">Updates channel</a>
-- <a href="https://DevilsHeavenMF.t.me">Support group</a>
-
-<hr>
-
-<h2>👀 Acknowledgements</h2>
-
-- Inspired by other open-source Telegram music bots.
-- Thanks to all the <a href="https://github.com/AnonymousX1025/AnonXMusic/graphs/contributors">contributors</a>.
-
-<hr>
+---
 
 <div align="center">
-
-⭐ Enjoying the tunes? <b>Star the repo</b> — feedback keeps the rhythm going!
-
+Made with ❤️
 </div>
